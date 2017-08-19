@@ -10,6 +10,7 @@ tasks.withType(JavaCompile) {
 // 打包源码
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
+    exclude '**/BuildConfig.class'
     classifier = 'sources'
 }
 
