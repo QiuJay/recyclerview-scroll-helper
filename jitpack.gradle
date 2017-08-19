@@ -8,7 +8,6 @@ tasks.withType(JavaCompile) {
 // 打包源码
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
-    exclude '**/BuildConfig.class'
     classifier = 'sources'
 }
 
@@ -17,7 +16,6 @@ task javadoc(type: Javadoc) {
     source = android.sourceSets.main.java.sourceFiles
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     classpath += configurations.compile
-    exclude '**/BuildConfig.class'
 }
 
 // 制作文档(Javadoc)
