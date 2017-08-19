@@ -2,10 +2,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven' // ADD THIS
 
 android {
+    packageBuildConfig false
+
     compileSdkVersion 25
     buildToolsVersion "26.0.1"
-
-    packageBuildConfig false
 
     defaultConfig {
         minSdkVersion 19
